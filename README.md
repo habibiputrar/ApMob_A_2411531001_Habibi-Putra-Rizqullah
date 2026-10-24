@@ -43,16 +43,6 @@ lib/
 │   ├── Praktikum/
 │   └── Tugas/
 └── pertemuan_05/
-    ├── main.dart
-    ├── login_screen.dart
-    ├── main_screen.dart
-    ├── dashboard_screen.dart
-    ├── history_screen.dart
-    ├── profile_screen.dart
-    ├── add_transaction_screen.dart
-    ├── transaction_detail_screen.dart
-    ├── models/
-    └── widgets/
 ```
 
 ## Persiapan
@@ -82,19 +72,19 @@ flutter emulators
 
 Repository ini menggunakan beberapa entry point. Jalankan file yang dipilih melalui opsi `-t`, karena tidak tersedia entry point gabungan pada `lib/main.dart`.
 
-Contoh menjalankan **Praktikum V**:
+Gunakan pola perintah berikut, lalu ganti `<entry-point>` dengan path dari tabel di bawah:
 
 ```bash
-flutter run -t lib/pertemuan_05/main.dart
+flutter run -t <entry-point>
 ```
 
 Untuk memilih perangkat tertentu, ambil ID dari `flutter devices`, lalu ganti `<device-id>` pada perintah berikut:
 
 ```bash
-flutter run -d <device-id> -t lib/pertemuan_05/main.dart
+flutter run -d <device-id> -t <entry-point>
 ```
 
-Untuk menjalankan latihan lain, ganti path setelah `-t` dengan salah satu entry point berikut.
+Pilih entry point sesuai pertemuan dan latihan yang ingin dijalankan.
 
 | Pertemuan | Latihan | Entry Point |
 | --- | --- | --- |
@@ -112,29 +102,15 @@ Untuk menjalankan latihan lain, ganti path setelah `-t` dengan salah satu entry 
 | 04 | Navigasi — Tugas | [lib/pertemuan_04/Tugas/main.dart](lib/pertemuan_04/Tugas/main.dart) |
 | 05 | Expense Tracker | [lib/pertemuan_05/main.dart](lib/pertemuan_05/main.dart) |
 
-## Fitur Praktikum V
-
-Praktikum V mengembangkan **Expense Tracker** dengan tema amber dan alur pencatatan keuangan:
-
-- **Login:** validasi format email dan password tidak kosong, serta tombol tampilkan/sembunyikan password.
-- **Beranda:** sapaan pengguna, email, saldo utama, transaksi terakhir, dan tombol tambah transaksi.
-- **Riwayat:** daftar transaksi dan akses ke detail setiap transaksi.
-- **Tambah transaksi:** judul, nominal, tanggal melalui kalender, kategori, serta pilihan pemasukan atau pengeluaran.
-- **Saldo:** bertambah saat mencatat pemasukan dan berkurang saat mencatat pengeluaran.
-- **Profil:** avatar, nama dari bagian email sebelum `@`, email pengguna, dan tombol logout.
-- **Logout:** kembali ke login dan menghapus halaman sesi sebelumnya dari riwayat navigasi.
-
-> Login pada Praktikum V merupakan simulasi lokal tanpa autentikasi server. Gunakan email berformat valid dan password tidak kosong. Transaksi disimpan di memori selama sesi; data kembali ke transaksi contoh setelah logout atau proses aplikasi dimulai ulang.
-
 ## Pemeriksaan Kode
 
-Untuk memeriksa kode Praktikum V:
+Untuk memeriksa kode pada seluruh folder praktikum:
 
 ```bash
-flutter analyze lib/pertemuan_05
+flutter analyze lib
 ```
 
-Ganti folder target untuk memeriksa pertemuan lainnya. Setiap latihan dapat dijalankan secara terpisah sesuai entry point di atas.
+Untuk memeriksa satu pertemuan saja, ganti `lib` dengan path folder pertemuan tersebut.
 
 ## Referensi
 
