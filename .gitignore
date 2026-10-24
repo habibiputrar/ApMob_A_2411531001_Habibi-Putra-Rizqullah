@@ -50,3 +50,10 @@ app.*.map.json
 .widget_preview/
 
 .vscode/
+
+# Source pertemuan terpisah tersedia di branch main.
+/lib/pertemuan_01/
+/lib/pertemuan_02/
+/lib/pertemuan_03/
+/lib/pertemuan_04/
+/lib/pertemuan_05/
