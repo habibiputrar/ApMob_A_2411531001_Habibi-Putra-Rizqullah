@@ -102,6 +102,30 @@ Pilih entry point sesuai pertemuan dan latihan yang ingin dijalankan.
 | 04 | Navigasi — Tugas | [lib/pertemuan_04/Tugas/main.dart](lib/pertemuan_04/Tugas/main.dart) |
 | 05 | Expense Tracker | [lib/pertemuan_05/main.dart](lib/pertemuan_05/main.dart) |
 
+## Aplikasi Gabungan Praktikum 1–5
+
+Aplikasi gabungan tersedia pada branch `gabungan-praktikum-1-5`, dengan entry point `lib/gabungan_praktikum/main.dart`. Aplikasi menggunakan SQLite untuk akun, sesi, saldo awal, dan transaksi milik masing-masing pengguna.
+
+```bash
+flutter pub get
+flutter run -t lib/gabungan_praktikum/main.dart
+```
+
+Untuk memeriksa aplikasi gabungan:
+
+```bash
+flutter analyze lib/gabungan_praktikum
+flutter test
+```
+
+APK versi 1.0.0 tersedia pada [GitHub Releases](https://github.com/habibiputrar/ApMob_A_2411531001_Habibi-Putra-Rizqullah/releases/tag/v1.0.0).
+
+Build debug dapat dijalankan tanpa kunci release. Untuk build release, siapkan `android/key.properties` berisi `storeFile`, `storePassword`, `keyAlias`, dan `keyPassword`, beserta keystore yang sesuai. File keystore dan konfigurasi privat diabaikan Git.
+
+```bash
+flutter build apk --release -t lib/gabungan_praktikum/main.dart
+```
+
 ## Pemeriksaan Kode
 
 Untuk memeriksa kode pada seluruh folder praktikum:
