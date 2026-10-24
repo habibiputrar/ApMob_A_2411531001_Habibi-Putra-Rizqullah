@@ -1,17 +1,143 @@
-# praktikum_1
+# Praktikum Aplikasi Mobile
 
-A new Flutter project.
+Kumpulan praktikum dan tugas mata kuliah **Aplikasi Mobile** menggunakan **Flutter** dan **Dart**, mulai dari form input sederhana hingga aplikasi pencatatan keuangan dengan beberapa halaman.
 
-## Getting Started
+| Identitas | Keterangan |
+| --- | --- |
+| Nama | Habibi Putra Rizqullah |
+| NIM | 2411531001 |
+| Kelas | A |
+| Repository | [ApMob_A_2411531001_Habibi-Putra-Rizqullah](https://github.com/habibiputrar/ApMob_A_2411531001_Habibi-Putra-Rizqullah) |
 
-This project is a starting point for a Flutter application.
+## Daftar Pertemuan
 
-A few resources to get you started if this is your first Flutter project:
+Setiap pertemuan disimpan dalam folder tersendiri di dalam `lib/`. Branch `main` memuat gabungan Pertemuan 01–05, sedangkan branch setiap pertemuan menyimpan tahap pengerjaannya.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+| Pertemuan | Materi dan Implementasi | Folder | Branch |
+| --- | --- | --- | --- |
+| 01 | Form input dengan `TextField`, validasi `TextFormField`, dan kalkulator Kabataku | [pertemuan_01](lib/pertemuan_01/) | [pertemuan-01](https://github.com/habibiputrar/ApMob_A_2411531001_Habibi-Putra-Rizqullah/tree/pertemuan-01) |
+| 02 | Pengenalan widget, penyusunan layout, styling, dan tampilan dashboard keuangan | [pertemuan_02](lib/pertemuan_02/) | [pertemuan-02](https://github.com/habibiputrar/ApMob_A_2411531001_Habibi-Putra-Rizqullah/tree/pertemuan-02) |
+| 03 | Form transaksi, validasi input, kategori, serta tanggal pada bagian tugas; tersedia latihan login terpisah | [pertemuan_03](lib/pertemuan_03/) | [pertemuan-03](https://github.com/habibiputrar/ApMob_A_2411531001_Habibi-Putra-Rizqullah/tree/pertemuan-03) |
+| 04 | Navigasi antara dashboard, form tambah transaksi, dan detail transaksi | [pertemuan_04](lib/pertemuan_04/) | [pertemuan-04](https://github.com/habibiputrar/ApMob_A_2411531001_Habibi-Putra-Rizqullah/tree/pertemuan-04) |
+| 05 | Login simulasi, tab Beranda–Riwayat–Profil, pencatatan transaksi, perhitungan saldo, dan logout | [pertemuan_05](lib/pertemuan_05/) | [pertemuan-05](https://github.com/habibiputrar/ApMob_A_2411531001_Habibi-Putra-Rizqullah/tree/pertemuan-05) |
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Struktur Folder
+
+```text
+lib/
+├── pertemuan_01/
+│   ├── form-textfield.dart
+│   ├── textformfield.dart
+│   └── kalkulator_kabataku.dart
+├── pertemuan_02/
+│   ├── modul1_widgets/
+│   │   ├── Praktikum/
+│   │   └── Tugas/
+│   └── modul2_layouts/
+│       ├── Praktikum/
+│       └── Tugas/
+├── pertemuan_03/
+│   ├── Praktikum/
+│   └── Tugas/
+├── pertemuan_04/
+│   ├── Praktikum/
+│   └── Tugas/
+└── pertemuan_05/
+    ├── main.dart
+    ├── login_screen.dart
+    ├── main_screen.dart
+    ├── dashboard_screen.dart
+    ├── history_screen.dart
+    ├── profile_screen.dart
+    ├── add_transaction_screen.dart
+    ├── transaction_detail_screen.dart
+    ├── models/
+    └── widgets/
+```
+
+## Persiapan
+
+- Flutter SDK dengan Dart yang sesuai dengan `pubspec.yaml` (`^3.13.2`).
+- Android SDK dan emulator Android, atau perangkat Android dengan USB debugging aktif.
+- Git untuk mengunduh repository.
+- Editor seperti Android Studio atau Visual Studio Code.
+
+Unduh repository dan siapkan dependensi dari folder yang berisi `pubspec.yaml`:
+
+```bash
+git clone https://github.com/habibiputrar/ApMob_A_2411531001_Habibi-Putra-Rizqullah.git
+cd ApMob_A_2411531001_Habibi-Putra-Rizqullah
+flutter pub get
+```
+
+Periksa lingkungan pengembangan dan perangkat yang tersedia:
+
+```bash
+flutter doctor
+flutter devices
+flutter emulators
+```
+
+## Menjalankan Praktikum
+
+Repository ini menggunakan beberapa entry point. Jalankan file yang dipilih melalui opsi `-t`, karena tidak tersedia entry point gabungan pada `lib/main.dart`.
+
+Contoh menjalankan **Praktikum V**:
+
+```bash
+flutter run -t lib/pertemuan_05/main.dart
+```
+
+Untuk memilih perangkat tertentu, ambil ID dari `flutter devices`, lalu ganti `<device-id>` pada perintah berikut:
+
+```bash
+flutter run -d <device-id> -t lib/pertemuan_05/main.dart
+```
+
+Untuk menjalankan latihan lain, ganti path setelah `-t` dengan salah satu entry point berikut.
+
+| Pertemuan | Latihan | Entry Point |
+| --- | --- | --- |
+| 01 | Form TextField | [lib/pertemuan_01/form-textfield.dart](lib/pertemuan_01/form-textfield.dart) |
+| 01 | Validasi TextFormField | [lib/pertemuan_01/textformfield.dart](lib/pertemuan_01/textformfield.dart) |
+| 01 | Kalkulator Kabataku | [lib/pertemuan_01/kalkulator_kabataku.dart](lib/pertemuan_01/kalkulator_kabataku.dart) |
+| 02 | Widget — Praktikum | [lib/pertemuan_02/modul1_widgets/Praktikum/main.dart](lib/pertemuan_02/modul1_widgets/Praktikum/main.dart) |
+| 02 | Widget — Tugas | [lib/pertemuan_02/modul1_widgets/Tugas/main.dart](lib/pertemuan_02/modul1_widgets/Tugas/main.dart) |
+| 02 | Layout — Praktikum | [lib/pertemuan_02/modul2_layouts/Praktikum/main.dart](lib/pertemuan_02/modul2_layouts/Praktikum/main.dart) |
+| 02 | Layout — Tugas | [lib/pertemuan_02/modul2_layouts/Tugas/main.dart](lib/pertemuan_02/modul2_layouts/Tugas/main.dart) |
+| 03 | Form transaksi — Praktikum | [lib/pertemuan_03/Praktikum/main.dart](lib/pertemuan_03/Praktikum/main.dart) |
+| 03 | Form transaksi — Tugas | [lib/pertemuan_03/Tugas/main.dart](lib/pertemuan_03/Tugas/main.dart) |
+| 03 | Latihan login terpisah | [lib/pertemuan_03/Praktikum/login_page.dart](lib/pertemuan_03/Praktikum/login_page.dart) |
+| 04 | Navigasi — Praktikum | [lib/pertemuan_04/Praktikum/main.dart](lib/pertemuan_04/Praktikum/main.dart) |
+| 04 | Navigasi — Tugas | [lib/pertemuan_04/Tugas/main.dart](lib/pertemuan_04/Tugas/main.dart) |
+| 05 | Expense Tracker | [lib/pertemuan_05/main.dart](lib/pertemuan_05/main.dart) |
+
+## Fitur Praktikum V
+
+Praktikum V mengembangkan **Expense Tracker** dengan tema amber dan alur pencatatan keuangan:
+
+- **Login:** validasi format email dan password tidak kosong, serta tombol tampilkan/sembunyikan password.
+- **Beranda:** sapaan pengguna, email, saldo utama, transaksi terakhir, dan tombol tambah transaksi.
+- **Riwayat:** daftar transaksi dan akses ke detail setiap transaksi.
+- **Tambah transaksi:** judul, nominal, tanggal melalui kalender, kategori, serta pilihan pemasukan atau pengeluaran.
+- **Saldo:** bertambah saat mencatat pemasukan dan berkurang saat mencatat pengeluaran.
+- **Profil:** avatar, nama dari bagian email sebelum `@`, email pengguna, dan tombol logout.
+- **Logout:** kembali ke login dan menghapus halaman sesi sebelumnya dari riwayat navigasi.
+
+> Login pada Praktikum V merupakan simulasi lokal tanpa autentikasi server. Gunakan email berformat valid dan password tidak kosong. Transaksi disimpan di memori selama sesi; data kembali ke transaksi contoh setelah logout atau proses aplikasi dimulai ulang.
+
+## Pemeriksaan Kode
+
+Untuk memeriksa kode Praktikum V:
+
+```bash
+flutter analyze lib/pertemuan_05
+```
+
+Ganti folder target untuk memeriksa pertemuan lainnya. Setiap latihan dapat dijalankan secara terpisah sesuai entry point di atas.
+
+## Referensi
+
+- [Dokumentasi Flutter](https://docs.flutter.dev/)
+- [Belajar Dart](https://dart.dev/language)
+- [Katalog Widget Flutter](https://docs.flutter.dev/ui/widgets)
